@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 44% 9%;
+    --card-foreground: 210 40% 96%;
+
+    --popover: 222 44% 9%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 38 92% 55%;
+    --primary-foreground: 222 47% 6%;
+
+    --secondary: 222 30% 16%;
+    --secondary-foreground: 210 40% 90%;
+
+    --muted: 222 30% 14%;
+    --muted-foreground: 215 20% 55%;
+
+    --accent: 172 66% 50%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 222 30% 18%;
+    --input: 222 30% 18%;
+    --ring: 38 92% 55%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 222 44% 8%;
+    --sidebar-foreground: 210 40% 90%;
+    --sidebar-primary: 38 92% 55%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 30% 14%;
+    --sidebar-accent-foreground: 210 40% 90%;
+    --sidebar-border: 222 30% 18%;
+    --sidebar-ring: 38 92% 55%;
+
+    /* Custom tokens */
+    --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 55%), hsl(28, 90%, 48%));
+    --gradient-teal: linear-gradient(135deg, hsl(172, 66%, 50%), hsl(190, 70%, 42%));
+    --gradient-card: linear-gradient(145deg, hsl(222, 44%, 11%), hsl(222, 44%, 8%));
+    --gradient-hero: linear-gradient(135deg, hsl(222, 47%, 8%), hsl(222, 47%, 4%));
+    --shadow-glow: 0 0 30px -5px hsl(38 92% 55% / 0.15);
+    --shadow-card: 0 4px 24px -4px hsl(222 47% 4% / 0.6);
+    --shadow-elevated: 0 8px 40px -8px hsl(222 47% 4% / 0.8);
+
+    /* Subject colors */
+    --subject-english: 340 65% 55%;
+    --subject-maths: 220 80% 60%;
+    --subject-physics: 38 92% 55%;
+    --subject-chemistry: 150 60% 45%;
+    --subject-biology: 120 50% 45%;
+    --subject-economics: 280 60% 55%;
+    --subject-computer: 172 66% 50%;
+  }
+
+  .light {
+    --background: 0 0% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 92%;
+    --secondary-foreground: 222 47% 11%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 172 66% 40%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 38 92% 50%;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 222 47% 11%;
+    --sidebar-primary: 38 92% 50%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 14% 95%;
+    --sidebar-accent-foreground: 222 47% 11%;
+    --sidebar-border: 220 13% 87%;
+    --sidebar-ring: 38 92% 50%;
+
+    --gradient-gold: linear-gradient(135deg, hsl(38, 92%, 50%), hsl(28, 90%, 45%));
+    --gradient-teal: linear-gradient(135deg, hsl(172, 66%, 40%), hsl(190, 70%, 35%));
+    --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%), hsl(220, 14%, 97%));
+    --gradient-hero: linear-gradient(135deg, hsl(220, 14%, 97%), hsl(220, 14%, 93%));
+    --shadow-glow: 0 0 30px -5px hsl(38 92% 50% / 0.2);
+    --shadow-card: 0 4px 24px -4px hsl(220 14% 80% / 0.3);
+    --shadow-elevated: 0 8px 40px -8px hsl(220 14% 70% / 0.3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .gradient-gold {
+    background: var(--gradient-gold);
+  }
+  .gradient-teal {
+    background: var(--gradient-teal);
+  }
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  .text-gradient-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
